@@ -26,7 +26,7 @@ button {
 }
 
 #login {
-    width: 300px;
+    width: 250px;
     height: 40px;
     background-color: #166fe5;
     font-size: 20px;
@@ -70,12 +70,12 @@ button {
 }
 
 .nono {
-    height: 100vh;
+    /* height: 100vh;
     width: 100vw;
     background-color: white;
     position: absolute;
     opacity: 0.8;
-    top: 0;
+    top: 0; */
     /* padding: 20px; */
 }
 
