@@ -138,6 +138,75 @@ input[type="submit"]:hover {
     background-color: #0e63ac;
 }
 
+#staticBackdropLabel {
+    margin: 20px 0px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.clanderplusGender {
+    margin: 10px 30px;
+}
+
+.clander {
+    text-align: center;
+    margin-left: 20px;
+}
+
+.clander option {
+    /* margin-left: 50px;s */
+}
+
+.gender {
+    display: flex;
+    margin: 10px;
+    flex-direction: row;
+    margin-left: 55px;
+}
+
+.gender div {
+    margin-left: 20px;
+}
+
+.gender input {
+    margin-left: 10px;
+}
+
+.clander {
+    display: flex;
+    justify-content: space-around;
+}
+
+.spac_select {
+    width: 80px;
+    margin: 10px;
+}
+
+#form_text {
+    margin-left: 30px;
+    font-size: 10px;
+    line-height: 40px;
+}
+
+.btn-success {
+    width: 120px;
+    height: 40px;
+    margin-left: 40%;
+}
+
+.btn-success:hover {
+    background-color: #166fe5;
+}
+
+.f-1-heading {
+    margin-left: 10%;
+    font-style: oblique;
+}
+
+
+/* .modal-dialog{
+
+} */
+
 
 /* .h1 {
     
