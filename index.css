@@ -143,18 +143,21 @@ input[type="submit"]:hover {
     font-family: 'Times New Roman', Times, serif;
 }
 
-.clanderplusGender {
-    margin: 10px 30px;
-}
 
-.clander {
+/* .clanderplusGender {
+    margin: 10px 30px;
+} */
+
+
+/* .clander {
     text-align: center;
     margin-left: 20px;
-}
+} */
 
-.clander option {
-    /* margin-left: 50px;s */
-}
+
+/* .form-inputs option {
+    border-radius: 50px;
+} */
 
 .gender {
     display: flex;
@@ -173,12 +176,15 @@ input[type="submit"]:hover {
 
 .clander {
     display: flex;
-    justify-content: space-around;
+    /* justify-content: space-around; */
 }
 
 .spac_select {
     width: 80px;
     margin: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    margin-left: 20%;
 }
 
 #form_text {
@@ -200,6 +206,25 @@ input[type="submit"]:hover {
 .f-1-heading {
     margin-left: 10%;
     font-style: oblique;
+}
+
+.form_inputs form {
+    display: flex;
+}
+
+.form-inputs {
+    /* display: flex; */
+    margin-bottom: 100px;
+}
+
+#Singup {
+    margin-left: 100px;
+    border-radius: 10px;
+    width: 80px;
+    padding: 10px;
+    background-color: #0e63ac;
+    margin-left: 50%;
+    margin-top: 40px;
 }
 
 

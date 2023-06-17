@@ -15,48 +15,51 @@
         <h1 id="h1">User Form</h1>
         <div class="form">
             <form action="#">
-                <div class="name"><input type="text" name="" id="f_name" placeholder="Email address or phone number">
+                <div class="name"><input type="text" required name="" id="f_name" placeholder="Email address or phone number">
                 </div>
-                <div class="pass"> <input type="password" name="" id="f_password" placeholder="Password"></div>
+                <div class="pass"> <input type="password" required name="" id="f_password" placeholder="Password"></div>
                 <button id="login">login</button>
                 <div class="forgetPassword">ForgetPassword</div>
                 <hr>
-                <button id="newAcnt" data-bs-toggle="modal" data-bs-target="#staticBackdrop" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Creat new account</button>
+                <button id="newAcnt" type="button" class="" data-bs-toggle="modal" data-bs-target="#exampleModal">Creat new account</button>
             </form>
         </div>
 
     </div>
     <!-- Button trigger modal -->
     <!-- Modal -->
-    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog">
+    <!-- Button trigger modal -->
+    <!-- <button>
+    Launch demo modal
+  </button> -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
             <div class="modal-content">
-                <h1 class="f-1-heading">Create a new account</h1>
-                <p class="f-1-heading"> It's quick and easy</p>
-                <!-- <div class="modal-header">
-                </div> -->
-                <div class="modal-title fs-5" id="staticBackdropLabel">
-                    <div class="container text-center">
-                        <div class="row">
-                            <div class="col">
-                                <input type="text" placeholder="First name" name="" id="Newname">
+                <div class="modal-header">
+
+                </div>
+                <div class="modal-body">
+                    <div class="form-inputs">
+                        <form action="" method="get">
+                            <div class="container text-center">
+                                <div class="forminput">
+                                    <input type="text" placeholder="First name" name="" id="Newname">
+                                </div>
+                                <div class="forminput">
+                                    <input type="text" placeholder="last name" id="lastName">
+                                </div>
+                                <div class="forminput">
+                                    <input type="text" placeholder="Mobile number or email address" name="" id="number_email">
+                                </div>
+                                <div class="forminput">
+                                    <input type="password" placeholder="New Password" name="" id="newPassword">
+                                </div>
+                                <!-- ruka ja -->
                             </div>
-                            <div class="col">
-                                <input type="text" placeholder="Sure name" id="lastName">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-10" style="margin: 0 8%;">
-                        <input type="text" placeholder="Mobile number or email address" name="" id="number_email">
-                    </div>
-                    <div class="col-10" style="margin: 0 8%;">
-                        <input type="text" placeholder="New Password" name="" id="newPassword">
-                    </div>
-                    <!-- ye clander or gender ka hen . ab is per flex laaga kr is pure maoin div ko row krdonga -->
-                    <div class="clanderplusGender">
-                        <p>Date of birth :</p>
-                        <div class="clander">
-                            <select name="date" class="spac_select spac_date" id="brith_date" onchange="handleSelectChange(event)">
+                            <p>Date of Birth</p>
+                            <div class="clander"><select name="date" class="spac_select spac_date" id="brith_date" onchange="handleSelectChange(event)">
                                 <option value="1" >1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -68,8 +71,8 @@
                                 <option value="9">9</option>
                                 <option value="10">10</option>
                             </select>
-                            <!-- month -->
-                            <select name="month" id="" onchange="handleSelectChange(event)">
+                                <!-- month -->
+                                <select name="month" id="brith_Month" class="spac_select" onchange="handleSelectChange(event)">
                                 <option value="Jan">Jan</option>
                                 <option value="Feb">Feb</option>
                                 <option value="Mar">Mar</option>
@@ -83,8 +86,8 @@
                                 <option value="Nov">Nov</option>
                                 <option value="Dec">Dec</option>
                             </select>
-                            <!-- years -->
-                            <select name="date" onchange="handleSelectChange(event)" class="spac_select" id="brith_years">
+                                <!-- years -->
+                                <select name="date" onchange="handleSelectChange(event)" class="spac_select" id="brith_years">
                                 <option value="2017">2017</option>
                                 <option value="2018">2018</option>
                                 <option value="2019">2019</option>
@@ -93,84 +96,48 @@
                                 <option value="2022">2022</option>
                                 <option value="2023">2023</option>
                             </select>
-                        </div>
+                            </div>
 
+                            <div class="singnup_btn">
+                                <button onclick="formSub()" id="Singup">Sing UP</button>
+                            </div>
+
+
+                        </form>
                     </div>
-                    <div class="gender" onchange="handleSelectChange(event)">
-                        <p>Gender :</p>
-                        <div>Male<input type="radio" name="gender" value="male" id="male"></div>
-                        <div>FeMale<input type="radio" name="gender" value="female" id="female"></div>
-                        <div>Custom<input type="radio" name="gender" value="custom" id="custom"></div>
-                    </div>
-                </div>
-                <button type="button" class="btn btn-success" onclick="formSub()">Sign-up</button>
-                <p id="form_text">
-                    People who use our service may have uploaded your contact information to Facebook. Learn more.
-                    <br> By clicking Sign Up, you agree to our Terms, Privacy Policy and Cookies Policy. You may receive SMS notifications from us and can opt out at any time.
-                </p>
-                <div class="modal-body">
-                    ...
+
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Understood</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
             </div>
         </div>
     </div>
-
-
-    <div class="nono">
-        <!-- Button trigger modal -->
-
-
-        <!-- Modal -->
-
-    </div>
-    <div class="newForm">
-        <h2>Create a New Facebook Account</h2>
-        <form action="registration_process.php" method="post">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-
-            <label for="confirm_password">Confirm Password:</label>
-            <input type="password" id="confirm_password" name="confirm_password" required>
-
-            <label for="birthdate">Birthdate:</label>
-            <input type="date" id="birthdate" name="birthdate" required>
-
-            <input type="submit" value="Sign Up">
-        </form>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-    <script src="form.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js " integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe " crossorigin="anonymous "></script>
+    <script src="form.js "></script>
 </body>
 
 </html>
-<!-- <option value="">11</option>
-                <option value="">12</option>
-                <option value="">13</option>
-                <option value="">14</option>
-                <option value="">15</option>
-                <option value="">16</option>
-                <option value="">17</option>
-                <option value="">18</option>
-                <option value="">19</option>
-                <option value="">20</option>
-                <option value="">21</option>
-                <option value="">22</option>
-                <option value="">23</option>
-                <option value="">24</option>
-                <option value="">25</option>
-                <option value="">26</option>
-                <option value="">27</option>
-                <option value="">28</option>
-                <option value="">29</option>
-                <option value="">30</option> -->
+<!-- <option value=" ">11</option>
+                <option value=" ">12</option>
+                <option value=" ">13</option>
+                <option value=" ">14</option>
+                <option value=" ">15</option>
+                <option value=" ">16</option>
+                <option value=" ">17</option>
+                <option value=" ">18</option>
+                <option value=" ">19</option>
+                <option value=" ">20</option>
+                <option value=" ">21</option>
+                <option value=" ">22</option>
+                <option value=" ">23</option>
+                <option value=" ">24</option>
+                <option value=" ">25</option>
+                <option value=" ">26</option>
+                <option value=" ">27</option>
+                <option value=" ">28</option>
+                <option value=" ">29</option>
+                <option value=" ">30</option> -->
+<!--  -->

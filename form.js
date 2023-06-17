@@ -10,10 +10,6 @@ login.addEventListener('click', () => {
     f_name.value = '';
     f_password.value = '';
 });
-
-
-// Newname  ; lastName :number_email :newPassword :male :female :custom
-
 let Newname = document.getElementById('Newname');
 let lastName = document.getElementById('lastName');
 let number_email = document.getElementById('number_email');
@@ -22,42 +18,51 @@ let male = document.getElementById('male');
 let female = document.getElementById('female');
 let custom = document.getElementById('custom');
 let brith_date = document.getElementById('brith_date');
-let brith_month = document.getElementById('brith_date');
-let brith_years = document.getElementById('brith_date');
-let spac_date = document.querySelector('.spac_date');
-// console.log(Newname, lastName, number_email, newPassword, male, female, custom, brith_date, brith_month, brith_years);
-// a.addEventListener('click', () => {
-//     console.log('hi')
-// })
+let brith_month = document.getElementById('brith_Month');
+let brith_years = document.getElementById('brith_years');
+let gender = document.getElementById('gender');
+
 function handleSelectChange(event) {
     let a = event.target.value;
-    console.log(a)
+    // console.log(a)
 }
 
 function formSub() {
-    console.log('Newname=>>  ' + Newname.value)
-    console.log('lastName=>>  ' + lastName.value)
-    console.log('number_email=>>  ' + number_email.value)
-    console.log('newPassword=>>  ' + newPassword.value)
-        // console.log('male=>>  ' + male.value)
-        // console.log('female=>>  ' + female.value)
-        // console.log('custom=>>  ' + custom.value)
     handleSelectChange(event)
-    obj()
-}
+    let getDATA = localStorage.getItem('FormData');
+    let formData = getDATA ? JSON.parse(getDATA) : []
+    console.log(formData);
 
-function obj() {
     let formObj = {
         firstname: Newname.value,
         lastname: lastName.value,
         UserNumber: number_email.value,
         UserNewpassword: newPassword.value,
-        date: brith_date.value,
-        month: brith_month.value,
-        years: brith_years.value
-    }
-    console.log(formObj)
-}
-let formData = []
+        UserDate: brith_date.value,
+        UserMonth: brith_month.value,
+        UserYears: brith_years.value,
 
-// date(6)
+    }
+    formData.push(formObj);
+    let storageDATA = localStorage.setItem("FormData", JSON.stringify(formData));
+    Newname.value = ''
+    lastName.value = ''
+    number_email.value = ''
+    newPassword.value = ''
+        // gender.value = ''
+}
+
+
+
+// console.log('Newname=>>  ' + Newname.value)
+// console.log('lastName=>>  ' + lastName.value)
+// console.log('number_email=>>  ' + number_email.value)
+// console.log('newPassword=>>  ' + newPassword.value)
+// console.log('male=>>  ' + male.value)
+// console.log('female=>>  ' + female.value)
+// console.log('custom=>>  ' + custom.value)
+// console.log('custom=>>  ' + gender.value)
+// let date_gender = (event) => {
+//     // let a = event.target.value;
+//     // console.log(a)
+// }
