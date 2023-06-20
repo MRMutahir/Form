@@ -176,7 +176,8 @@ input[type="submit"]:hover {
 
 .clander {
     display: flex;
-    /* justify-content: space-around; */
+    justify-content: space-around;
+    padding: 0px 60px;
 }
 
 .spac_select {
