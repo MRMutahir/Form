@@ -16,10 +16,17 @@ let datasignup = getDATA ? JSON.parse(getDATA) : [];
 
 
 function formSub() {
-    if (Newname.value == '' || lastName.value == '' || UserNumber.value == '' ||
-        UserNewpassword.value == '' || UserDate.value == '' || UserMonth.value == '' || UserYears.value == '') {
-        alert('Form incorrect')
+    if (Newname.value == '' || lastName.value == '' || number_email.value == '' || newPassword.value == '' || brith_date.value == '' || brith_month.value == '' || brith_years.value == '') {
+        // console.log(Newname.value)
+        // console.log(lastName.value)
+        // console.log(UserNumber.value)
+        // console.log(newPassword.value)
+        // console.log(UserDate.value)
+        // console.log(UserMonth.value)
+        // console.log(UserYears.value)
+        alert('Form incorrect');
     } else {
+        console.log("else working")
         let formObj = {
             firstname: Newname.value,
             lastname: lastName.value,
@@ -29,6 +36,8 @@ function formSub() {
             UserMonth: brith_month.value,
             UserYears: brith_years.value,
         };
+
+        console.log(formObj, "form obj")
 
         datasignup.push(formObj);
         localStorage.setItem('datasignup', JSON.stringify(datasignup));
@@ -41,11 +50,17 @@ function formSub() {
     }
 }
 
+
+
+
+// }
+// }
+
 let f_name = document.getElementById('f_name');
 let f_password = document.getElementById('f_password');
 let login = document.getElementById('login');
-login.addEventListener('click', function() {
-    let loggedInUser = datasignup.find(function(itemValue) {
+login.addEventListener('click', function () {
+    let loggedInUser = datasignup.find(function (itemValue) {
         return (
             itemValue.UserNumber === f_name.value &&
             itemValue.UserNewpassword === f_password.value
