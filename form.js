@@ -6,25 +6,23 @@ let brith_date = document.getElementById('brith_date');
 let brith_month = document.getElementById('brith_Month');
 let brith_years = document.getElementById('brith_years');
 
-// function handleSelectChange(event) {
-//     let a = event.target.value;
-//     console.log(a);
-//     // console.log(event);
-// }
 let getDATA = localStorage.getItem('datasignup');
 let datasignup = getDATA ? JSON.parse(getDATA) : [];
+// console.log(datasignup)
 
-
+// console.log(existemail);
 function formSub() {
+    let existemail = datasignup.some(existEmail => {
+        return existEmail.UserNumber === number_email.value
+    })
     if (Newname.value == '' || lastName.value == '' || number_email.value == '' || newPassword.value == '' || brith_date.value == '' || brith_month.value == '' || brith_years.value == '') {
-        // console.log(Newname.value)
-        // console.log(lastName.value)
-        // console.log(UserNumber.value)
-        // console.log(newPassword.value)
-        // console.log(UserDate.value)
-        // console.log(UserMonth.value)
-        // console.log(UserYears.value)
         alert('Form incorrect');
+    } else if (existemail) {
+        alert('ye mail phele s hen');
+        Newname.value = '';
+        lastName.value = '';
+        number_email.value = '';
+        newPassword.value = '';
     } else {
         console.log("else working")
         let formObj = {
@@ -36,6 +34,7 @@ function formSub() {
             UserMonth: brith_month.value,
             UserYears: brith_years.value,
         };
+        console.log(datasignup.UserNumber)
 
         console.log(formObj, "form obj")
 
@@ -50,17 +49,11 @@ function formSub() {
     }
 }
 
-
-
-
-// }
-// }
-
 let f_name = document.getElementById('f_name');
 let f_password = document.getElementById('f_password');
 let login = document.getElementById('login');
-login.addEventListener('click', function () {
-    let loggedInUser = datasignup.find(function (itemValue) {
+login.addEventListener('click', function() {
+    let loggedInUser = datasignup.find(function(itemValue) {
         return (
             itemValue.UserNumber === f_name.value &&
             itemValue.UserNewpassword === f_password.value
