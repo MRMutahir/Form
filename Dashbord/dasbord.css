@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main {
+    width: 60vw;
+    height: 80vh;
+    background-color: rgb(189, 178, 164);
+    position: relative;
+    margin: 20px;
+}
+
+.divpost {
+    height: 400px;
+    width: 400px;
+    background-color: antiquewhite;
+    margin: 20px;
+    border-radius: 5px;
+}
+
+textarea {
+    width: 400px;
+    border: none;
+}
+
+.forminform {
+    border-radius: 5px;
+    width: 60vw;
+    height: 40vh;
+    background-color: rebeccapurple;
+    /* position: relative; */
+}
+
+.profile {
+    border-radius: 50px;
+    background-color: red;
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    /* bottom: px; */
+    top: 180px;
+    left: 80px;
+}
+
+.profile img {
+    height: 100px;
+    width: 100px;
+}
+
+#fullName {
+    font-size: 40px;
+    font-weight: 500;
+}
+
+#email {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+#Birthday {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.datainfosec {
+    margin-top: 40px;
+    margin-left: 60px;
+}
+
+.buttons {
+    display: flex;
+    /* margin-left: 5px; */
+    /* justify-c0ontent: space-around; */
+    width: 50vw;
+}
+
+.buttons button {
+    margin-left: 10px;
+    margin-top: 10px;
+    border-radius: 20px;
+    width: 100px;
+    padding: 5px;
+}
