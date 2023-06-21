@@ -18,7 +18,7 @@ function formSub() {
     if (Newname.value == '' || lastName.value == '' || number_email.value == '' || newPassword.value == '' || brith_date.value == '' || brith_month.value == '' || brith_years.value == '') {
         alert('Form incorrect');
     } else if (existemail) {
-        alert('ye mail phele s hen');
+        alert('This email is aready');
         Newname.value = '';
         lastName.value = '';
         number_email.value = '';
@@ -34,8 +34,7 @@ function formSub() {
             UserMonth: brith_month.value,
             UserYears: brith_years.value,
         };
-        console.log(datasignup.UserNumber)
-
+        // console.log(datasignup.UserNumber)
         console.log(formObj, "form obj")
 
         datasignup.push(formObj);
@@ -67,7 +66,7 @@ login.addEventListener('click', function() {
         f_name.value = '';
         f_password.value = '';
     } else {
-        console.log('Invalid username or password');
+        alert('Invalid username or password');
         f_name.value = '';
         f_password.value = '';
     }
