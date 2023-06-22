@@ -5,7 +5,7 @@
 }
 
 .main {
-    width: 60vw;
+    width: 95vw;
     height: 80vh;
     background-color: rgb(189, 178, 164);
     position: relative;
@@ -26,8 +26,9 @@ textarea {
 }
 
 .forminform {
-    border-radius: 5px;
-    width: 60vw;
+    /* border-radius: 5px; */
+    width: 95vw;
+    /* margin: 0px; */
     height: 40vh;
     background-color: rebeccapurple;
     /* position: relative; */
@@ -71,9 +72,9 @@ textarea {
 
 .buttons {
     display: flex;
-    /* margin-left: 5px; */
-    /* justify-c0ontent: space-around; */
-    width: 50vw;
+    margin-top: 10px;
+    justify-content: space-around;
+    /* width: 50vw; */
 }
 
 .buttons button {
@@ -81,5 +82,38 @@ textarea {
     margin-top: 10px;
     border-radius: 20px;
     width: 100px;
+    font-size: 10px;
+    font-weight: 800;
     padding: 5px;
+}
+
+#post {
+    border: 1px solid black;
+    width: 50vw;
+    height: 30vh;
+    background: gray;
+    border-radius: 10px;
+}
+
+#post input {
+    height: 40px;
+    width: 600px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 10px;
+    /* padding-bottom: 60px; */
+    /* margin-bottom: 50px; */
+    /* bottom: 20px; */
+    /* background: transparent; */
+}
+
+#post img {
+    /* margin-top: 10px; */
+    height: 80px;
+    width: 80px;
+}
+
+.postinputflex {
+    display: flex;
+    margin: 20px;
 }

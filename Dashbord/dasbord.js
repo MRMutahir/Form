@@ -14,9 +14,6 @@ let forminform = document.querySelector('.forminform');
 Object.keys(modifyData).forEach(ele => {
         // console.log(modifyData[ele]);
         let sumName = modifyData.firstname + " " + modifyData.lastname;
-        let sumDateBir = modifyData.UserDate + modifyData.UserMonth + modifyData.UserYears;
-        // console.log(sumName);
-        // console.log(sumDateBir);
         fullName.innerText = sumName;
         email.innerText = modifyData.UserNumber;
         birth1.innerHTML = modifyData.UserDate;
@@ -24,18 +21,17 @@ Object.keys(modifyData).forEach(ele => {
         birth3.innerHTML = modifyData.UserYears;
     })
     // post.innerText = 'hi'
-function posting(params) {
-    let div = document.createElement('div');
-    let textarea = document.createElement('textarea');
-    console.log(textarea);
-    post.appendChild(div);
-    post.appendChild(textarea)
-    div.className = 'divpost'
-    console.log(div);
+    // function posting(params) {
+    //     let div = document.createElement('div');
+    //     let textarea = document.createElement('textarea');
+    //     console.log(textarea);
+    //     post.appendChild(div);
+    //     post.appendChild(textarea)
+    //     div.className = 'divpost'
+    //     console.log(div)
 
-    // let uplodpicture = document.querySelector('image');
-    // console.log(uplodpicture)
-}
+
+// }
 
 // function upload(params) {
 //     let img = document.createElement('div');
