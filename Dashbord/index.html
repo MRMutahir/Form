@@ -31,13 +31,19 @@
                 <span class="birth1"></span>
                 <span class="birth2"></span>
                 <span class="birth3"></span>
+                <br>
+                <span id="clock">hi</span>
             </h1>
         </div>
         <div class="buttons "><button class="btn1">Open to</button><button class="btn2">Add Profile section</button><button class="btn3">More</button></div>
     </div>
     <div id="post">
         <div class="postinputflex">
-            <img src="./picture/download-removebg-preview (3).png" alt="">
+            <p><img src="./picture/download-removebg-preview (3).png" alt="">
+
+            </p>
+
+
             <!-- <input type="text" id="text" style="height: 200px;width: 500px;"> -->
             <div class="posticon">
                 <button>Picture <i class="fa-solid fa-image"></i></button>
@@ -49,24 +55,52 @@
         <textarea name="" id="textarea" cols="10"></textarea>
         <button id="btn_1">post</button>
     </div>
-    <!-- <div class="postUI">
-        </div> -->
     <!-- <h1>postUi</h1> -->
+    <div class="mainpost">
 
-    <div class="navbar">
-        <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <!-- <textarea name="" id="" cols="30" rows="10"></textarea> -->
-        </ul>
+        <style>
+            #ui {
+                border: 1px solid black;
+                border-radius: 5px;
+                height: 50vh;
+                width: 50vw;
+                margin-left: 25vw;
+                margin-top: 20px;
+                padding: 20px;
+                overflow: hidden;
+            }
+            
+            .like {
+                display: flex;
+                justify-content: space-around;
+                list-style: none;
+                margin-top: 20px;
+                border: 1px blue solid;
+                padding: 5px;
+                border-radius: 20px;
+                box-shadow: 10px 10px 10px rgb(0, 0, 0);
+                margin-left: 25%;
+                width: 50vw;
+                height: 5vh;
+            }
+            
+            #ui i {
+                position: absolute;
+                right: 100px;
+            }
+        </style>
+        <!-- <i style="position: absolute; right: 280px; top: 780px;" class="fa-solid fa-caret-down"></i>
+        <div id="ui" style="position: relative;">
+
+        </div>
+        <div class="like">
+
+            <li> <i class="fa-regular fa-heart"></i>like</li>
+            <li><i class="fa-regular fa-comment"></i>comment</li>
+            <li> <i class="fa-regular fa-share-from-square"></i>share</li>
+
+
+        </div> -->
     </div>
 </body>
 <script src="dasbord.js"></script>
