@@ -89,18 +89,20 @@ textarea {
 
 #post {
     border: 1px solid black;
-    width: 50vw;
+    width: 70vw;
     height: 30vh;
     background: gray;
+    margin-left: 15%;
     border-radius: 10px;
 }
 
-#post input {
+#post textarea {
     height: 40px;
     width: 600px;
     border-radius: 10px;
-    margin-top: 20px;
-    margin-left: 10px;
+    /* margin-top: 20px; */
+    /* margin: 20px; */
+    margin-left: 50px;
     /* padding-bottom: 60px; */
     /* margin-bottom: 50px; */
     /* bottom: 20px; */
@@ -116,4 +118,10 @@ textarea {
 .postinputflex {
     display: flex;
     margin: 20px;
+}
+
+.posticon button {
+    border: none;
+    background-color: transparent;
+    margin-left: 20px;
 }
